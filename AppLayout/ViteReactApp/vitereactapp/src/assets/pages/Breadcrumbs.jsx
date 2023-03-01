@@ -1,10 +1,9 @@
 import React from 'react'
+import Migas from '../elements/Breadcrumbs/Migas'
 
 function Breadcrumbs() {
   return (
-    <div>
-      <p>migas</p>
-    </div>
+    <Migas/>
   )
 }
 

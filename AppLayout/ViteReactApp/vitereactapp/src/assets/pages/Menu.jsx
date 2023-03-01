@@ -1,15 +1,10 @@
 import React from 'react'
+import NavMenu from '../elements/Menu/NavMenu'
 
 function Menu() {
   return (
     <div>
-      <h5>Menú de navegación</h5>
-      <ul>
-        <li>a</li>
-        <li>b</li>
-        <li>c</li>
-        <li>d</li>
-      </ul>
+<NavMenu/>
     </div>
   )
 }
