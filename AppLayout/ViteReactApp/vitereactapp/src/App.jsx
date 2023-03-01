@@ -6,11 +6,11 @@ import ResponsiveBox, {
   Item,
   Location,
 } from 'devextreme-react/responsive-box';
-import Header from './assets/pages/Header';
-import Menu from './assets/pages/Menu';
-import Breadcrumbs from './assets/pages/Breadcrumbs';
-import MainContent from './assets/pages/MainContent';
-import Footer from './assets/pages/Footer';
+import Header from './pages/Header';
+import Menu from './pages/Menu';
+import Breadcrumbs from './pages/Breadcrumbs';
+import MainContent from './pages/MainContent';
+import Footer from './pages/Footer';
 import 'devextreme/dist/css/dx.light.css';
 import './index.css'
 import './styles.css'

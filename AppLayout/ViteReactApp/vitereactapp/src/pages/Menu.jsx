@@ -1,5 +1,5 @@
 import React from 'react'
-import NavMenu from '../elements/Menu/NavMenu'
+import NavMenu from '../assets/elements/Menu/NavMenu'
 
 function Menu() {
   return (
