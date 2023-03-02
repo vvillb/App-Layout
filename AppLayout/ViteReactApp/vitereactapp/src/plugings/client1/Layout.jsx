@@ -6,15 +6,15 @@ import ResponsiveBox, {
   Item,
   Location,
 } from 'devextreme-react/responsive-box';
-import Header from './plugings/client1/pages/Header';
-import Menu from './plugings/client1/pages/Menu';
-import Breadcrumbs from './plugings/client1/pages/Breadcrumbs';
-import MainContent from './plugings/client1/pages/MainContent';
-import Footer from './plugings/client1/pages/Footer';
+import Header from './pages/Header';
+import Menu from './pages/Menu';
+import Breadcrumbs from './pages/Breadcrumbs';
+import MainContent from './pages/MainContent';
+import Footer from './pages/Footer';
 import 'devextreme/dist/css/dx.light.css';
-import './index.css'
-import './plugings/common/App.css'
-import './plugings/common/styles.css'
+import '../common/index.css'
+import '../common/App.css'
+import '../common/styles.css'
 
 function screen(width) {
   return (width < 700) ? 'sm' : 'lg';
