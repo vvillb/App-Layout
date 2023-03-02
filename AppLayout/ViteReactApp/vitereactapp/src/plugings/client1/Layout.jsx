@@ -20,7 +20,7 @@ function screen(width) {
   return (width < 700) ? 'sm' : 'lg';
 }
 
-class App extends React.Component {
+class Layout extends React.Component {
   render() {
     return (
       <div id="page">
@@ -122,6 +122,6 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Layout;
 
 
