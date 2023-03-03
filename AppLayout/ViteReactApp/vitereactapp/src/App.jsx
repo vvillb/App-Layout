@@ -1,11 +1,18 @@
 import React from 'react'
 import Layout from './plugings/client2/Layout'
+import {BrowserRouter as Router, Routes, Route, BrowserRouter} from 'react-router-dom'
 
 function App() {
   return (
     <>
-      <Layout/>
+    <BrowserRouter>
+    <Routes>
+    <Route path='/' element={<Layout/>}/> 
+    </Routes>
+    </BrowserRouter>
+      
     </>
+    
   )
 }
 
