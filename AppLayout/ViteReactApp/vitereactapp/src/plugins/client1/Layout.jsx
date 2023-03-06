@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Children } from 'react';
 
 import ResponsiveBox, {
   Row,
@@ -9,7 +9,6 @@ import ResponsiveBox, {
 import Header from './pages/Header';
 import Menu from './pages/Menu';
 import Breadcrumbs from './pages/Breadcrumbs';
-import MainContent from './pages/MainContent';
 import Footer from './pages/Footer';
 import 'devextreme/dist/css/dx.light.css';
 import '../common/index.css'
@@ -65,7 +64,7 @@ class Layout extends React.Component {
               screen="sm"
             ></Location>
             <div className="content item">
-              <MainContent/>
+              {this.props.children}
             </div>
           </Item>
           <Item>
