@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {lazy, Suspense} from 'react';
 
 import ResponsiveBox, {
   Row,
@@ -6,11 +6,11 @@ import ResponsiveBox, {
   Item,
   Location,
 } from 'devextreme-react/responsive-box';
-import Header from './pages/Header';
-import Menu from './pages/Menu';
-import Breadcrumbs from './pages/Breadcrumbs';
-import MainContent from './pages/MainContent';
-import Footer from './pages/Footer';
+import Header from '../../plugings/client2/pages/Header';
+import Menu from '../../plugings/client2/pages/Menu';
+import Breadcrumbs from '../../plugings/client2/pages/Breadcrumbs';
+import MainContent from '../../plugings/client2/pages/MainContent';
+import Footer from '../../plugings/client2/pages/Footer';
 import 'devextreme/dist/css/dx.light.css';
 import '../common/index.css'
 import '../common/App.css'
