@@ -30,6 +30,7 @@ class NavMenu extends React.Component {
     this.orientationChanged = this.orientationChanged.bind(this);
     this.hideSubmenuOnMouseLeaveChanged = this.hideSubmenuOnMouseLeaveChanged.bind(this);
   }
+  //por qué en el responsive box no es necesario hacer todo esto???
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
   }
