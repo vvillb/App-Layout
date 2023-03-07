@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Menu from 'devextreme-react/menu';
 import service from './Data.jsx';
@@ -49,6 +50,8 @@ class NavMenu extends React.Component {
     const {
       showFirstSubmenuModes, orientation, hideSubmenuOnMouseLeave, currentProduct,
     } = this.state;
+    
+      
     return (
       <div className="form">
         <div>
@@ -61,7 +64,7 @@ class NavMenu extends React.Component {
             onItemClick={this.itemClick}
           />
           {currentProduct
-          && <div id="product-details">
+          && <div id="product-details" >
             <img src={currentProduct.icon} />
             <div className="name">{currentProduct.name}</div>
             <div className="price">{`$${currentProduct.price}`}</div>
