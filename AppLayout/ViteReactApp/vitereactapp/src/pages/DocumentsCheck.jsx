@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../plugins/client1/Layout';
+import Layout from '@client-layout';
 
 
 function DocumentsCheck() {
@@ -8,7 +8,7 @@ function DocumentsCheck() {
     <div>
       <h1>Consulta de documentos</h1>
     </div>
-    </Layout>
+  </Layout>
   )
 }
 

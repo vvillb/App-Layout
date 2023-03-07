@@ -1,4 +1,5 @@
 import React from 'react';
+import './Style3.css'
 
 import ResponsiveBox, {
   Row,
@@ -6,15 +7,14 @@ import ResponsiveBox, {
   Item,
   Location,
 } from 'devextreme-react/responsive-box';
-import Header from '../../plugings/client3/pages/Header';
-import Menu from '../../plugings/client3/pages/Menu';
+import Header from '../../plugins/client3/pages/Header';
+import Menu from '../../plugins/client3/pages/Menu';
 import Breadcrumbs from './pages/Breadcrumbs';
-import MainContent from '../../plugings/client3/pages/MainContent';
-import Footer from '../../plugings/client3/pages/Footer';
+import Footer from '../../plugins/client3/pages/Footer';
 import 'devextreme/dist/css/dx.light.css';
 import '../common/index.css'
 import '../common/App.css'
-import './Style1.css'
+import './Style3.css'
 
 function screen(width) {
   return (width < 700) ? 'sm' : 'lg';
@@ -65,7 +65,7 @@ class Layout extends React.Component {
               screen="sm"
             ></Location>
             <div className="content item">
-              <MainContent/>
+            {this.props.children}
             </div>
           </Item>
           <Item>

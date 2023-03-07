@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "CLIENTE=client1 vite",
-    "build": "vite build",
+    "dev": "vite --config ./src/config/cliente3.vite.config.js",
+    "build": "vite build --config ./src/config/cliente2.vite.config.js",
     "preview": "vite preview"
   },
   "dependencies": {

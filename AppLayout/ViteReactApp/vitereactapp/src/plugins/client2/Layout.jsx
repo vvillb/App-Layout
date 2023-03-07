@@ -9,12 +9,11 @@ import ResponsiveBox, {
 import Header from '../../plugins/client2/pages/Header';
 import Menu from '../../plugins/client2/pages/Menu';
 import Breadcrumbs from './pages/Breadcrumbs';
-import MainContent from '../../plugins/client2/pages/MainContent';
 import Footer from '../../plugins/client2/pages/Footer';
 import 'devextreme/dist/css/dx.light.css';
 import '../common/index.css'
 import '../common/App.css'
-import './Style1.css'
+import './Style2.css'
 
 function screen(width) {
   return (width < 700) ? 'sm' : 'lg';
@@ -65,7 +64,7 @@ class Layout extends React.Component {
               screen="sm"
             ></Location>
             <div className="content item">
-              <MainContent/>
+            {this.props.children}
             </div>
           </Item>
           <Item>
