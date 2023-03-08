@@ -15,7 +15,7 @@ import {
 function screen(width) {
   return (width < 700) ? 'horizontal' : 'vertical';
 }
-/*-----------WRAPPER---------*/
+/*-----------WRAPPER?---------*/
 function withRouter(Component) {
   function ComponentWithRouterProp(props) {
     let location = useLocation();
@@ -55,7 +55,6 @@ class NavMenu extends React.Component {
     this.orientationChanged = this.orientationChanged.bind(this);
     this.hideSubmenuOnMouseLeaveChanged = this.hideSubmenuOnMouseLeaveChanged.bind(this);
   }
-  //por qué en el responsive box no es necesario hacer todo esto???
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
   }
@@ -100,9 +99,8 @@ class NavMenu extends React.Component {
     );
   }
 
-  /*------------------------------------*/
+  /*-----------error: Cannot read properties of null (reading 'path')-------------------------*/
   itemClick = (props) => {
-    
     const { navigate, currentProduct } = this.state;
     navigate(currentProduct.path); // navigate to the new page
   }
