@@ -4,8 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --config ./src/config/cliente3.vite.config.js",
-    "build": "vite build --config ./src/config/cliente2.vite.config.js",
+    
+    "dev:client1":"vite --config ./src/config/cliente1.vite.config.js",
+    "dev:client2":"vite --config ./src/config/cliente2.vite.config.js",
+    "dev:client3":"vite --config ./src/config/cliente3.vite.config.js",
+    "build:client1": "vite build --config ./src/config/cliente1.vite.config.js",
+    "build:client2": "vite build --config ./src/config/cliente2.vite.config.js",
+    "build:client3": "vite build --config ./src/config/cliente3.vite.config.js",
     "preview": "vite preview"
   },
   "dependencies": {
