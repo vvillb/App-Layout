@@ -1,13 +1,37 @@
-
 import React from 'react';
 import Menu from 'devextreme-react/menu';
 import service from './Data.jsx';
-import './style.css'
+import './style.css';
+import {
+  
+  useLocation,
+  useNavigate,
+  useParams,
+  } from "react-router-dom";
+
+
+
 
 function screen(width) {
   return (width < 700) ? 'horizontal' : 'vertical';
 }
+/*-----------WRAPPER---------*/
+function withRouter(Component) {
+  function ComponentWithRouterProp(props) {
+    let location = useLocation();
+    const navigate = useNavigate();
+    let params = useParams();
+    return (
+      <Component
+        {...props}
+        router={{ location, navigate, params}}
+      />
+    );
+  }
 
+  return ComponentWithRouterProp;
+}
+/*----------------------------*/
 class NavMenu extends React.Component {
 
   constructor(props) {
@@ -67,7 +91,6 @@ class NavMenu extends React.Component {
           && <div id="product-details" >
             <img src={currentProduct.icon} />
             <div className="name">{currentProduct.name}</div>
-            <div className="price">{`$${currentProduct.price}`}</div>
           </div>
           }
         
@@ -77,14 +100,14 @@ class NavMenu extends React.Component {
     );
   }
 
-  itemClick(e) {
-    if (e.itemData.price) {
-      this.setState({
-        currentProduct: e.itemData,
-      });
-    }
+  /*------------------------------------*/
+  itemClick = (props) => {
+    
+    const { navigate, currentProduct } = this.state;
+    navigate(currentProduct.path); // navigate to the new page
   }
-
+  
+/*---------------------------------------*/
   showSubmenuModeChanged(e) {
     this.setState({
       showFirstSubmenuModes: e.value,
@@ -104,4 +127,4 @@ class NavMenu extends React.Component {
   }
 }
 
-export default NavMenu;
+export default withRouter(NavMenu);
