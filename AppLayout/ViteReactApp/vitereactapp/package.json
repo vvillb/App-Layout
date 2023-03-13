@@ -4,10 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    
-    "dev:client1":"vite --config ./src/config/cliente1.vite.config.js",
-    "dev:client2":"vite --config ./src/config/cliente2.vite.config.js",
-    "dev:client3":"vite --config ./src/config/cliente3.vite.config.js",
+    "dev:client1": "vite --config ./src/config/cliente1.vite.config.js",
+    "dev:client2": "vite --config ./src/config/cliente2.vite.config.js",
+    "dev:client3": "vite --config ./src/config/cliente3.vite.config.js",
     "build:client1": "vite build --config ./src/config/cliente1.vite.config.js",
     "build:client2": "vite build --config ./src/config/cliente2.vite.config.js",
     "build:client3": "vite build --config ./src/config/cliente3.vite.config.js",
@@ -18,6 +17,7 @@
     "devextreme-react": "22.2.4",
     "history": "^5.3.0",
     "i18next": "^22.4.11",
+    "i18next-http-backend": "^2.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^12.2.0",

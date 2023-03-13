@@ -1,5 +1,5 @@
-import React, { Children } from 'react';
-
+import React from 'react';
+import PropTypes from 'prop-types';
 import ResponsiveBox, {
   Row,
   Col,
@@ -14,10 +14,19 @@ import 'devextreme/dist/css/dx.light.css';
 import '../common/index.css'
 import '../common/App.css'
 import './Style1.css'
+import NavigationDrawer from './pages/NavigationDrawer';
 
 function screen(width) {
   return (width < 700) ? 'sm' : 'lg';
 }
+/* The error message suggests that the children prop is not defined in the props validation of the Layout component. 
+You can add the following code to validate the children prop
+Layout.propTypes = {
+  children: PropTypes.node
+};
+/*This code imports the PropTypes library and adds a propTypes static property to the Layout class that 
+defines the children prop as a node type. The node type is a special type that allows any valid React 
+node to be passed as a prop, including other components, text, and elements.    */
 
 class Layout extends React.Component {
   render() {
