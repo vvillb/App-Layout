@@ -1,5 +1,8 @@
 import {defineConfig} from 'vite'
 import react from '@vitejs/plugin-react'
+import i18n from 'i18next';
+import backend from 'i18next-http-backend';
+
 
 export default defineConfig({
     plugins:[react({
@@ -19,3 +22,10 @@ export default defineConfig({
         }
     }
 })
+i18n.use(backend).init({
+  lng: 'es', // default language
+  fallbackLng: 'es', // fallback language
+  backend: {
+    loadPath: '../plugins/client2/i18n/es/client.json',
+  },
+});

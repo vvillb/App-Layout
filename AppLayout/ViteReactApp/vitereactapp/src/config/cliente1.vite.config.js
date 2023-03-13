@@ -1,6 +1,7 @@
 import {defineConfig} from 'vite'
 import react from '@vitejs/plugin-react'
 
+
 export default defineConfig({
     plugins:[react({
     babel: {
@@ -18,4 +19,4 @@ export default defineConfig({
             '@client-layout':`../../src/plugins/client1/Layout.jsx`,
         }
     }
-})
+});
