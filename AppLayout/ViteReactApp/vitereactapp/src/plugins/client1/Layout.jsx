@@ -31,6 +31,8 @@ node to be passed as a prop, including other components, text, and elements.    
 class Layout extends React.Component {
   render() {
     return (
+      
+      
       <div id="page">
         <ResponsiveBox
           singleColumnScreen="sm"

@@ -15,7 +15,7 @@ import {
 function screen(width) {
   return (width < 700) ? 'horizontal' : 'vertical';
 }
-/*-----------WRAPPER?---------*/
+/*-----------WRAPPER?---------
 function withRouter(Component) {
   function ComponentWithRouterProp(props) {
     let location = useLocation();
@@ -31,7 +31,7 @@ function withRouter(Component) {
 
   return ComponentWithRouterProp;
 }
-/*----------------------------*/
+---------------------------*/
 class NavMenu extends React.Component {
 
   constructor(props) {
@@ -99,13 +99,13 @@ class NavMenu extends React.Component {
     );
   }
 
-  /*-----------error: Cannot read properties of null (reading 'path')-------------------------*/
+  /*-----------error: Cannot read properties of null (reading 'path')----------------------------------------------------------------*/
+
   itemClick = (props) => {
     const { navigate, currentProduct } = this.state;
     navigate(currentProduct.path); // navigate to the new page
   }
   
-/*---------------------------------------*/
   showSubmenuModeChanged(e) {
     this.setState({
       showFirstSubmenuModes: e.value,
@@ -125,4 +125,4 @@ class NavMenu extends React.Component {
   }
 }
 
-export default withRouter(NavMenu);
+export default NavMenu;
