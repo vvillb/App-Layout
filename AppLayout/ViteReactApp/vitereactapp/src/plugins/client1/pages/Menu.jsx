@@ -1,10 +1,11 @@
 import React from 'react'
 import NavMenu from '../../../assets/elements/Menu/NavMenu'
+import NavigationDrawer from './NavigationDrawer'
 
 function Menu() {
   return (
     <div>
-<NavMenu/>
+<NavigationDrawer/>
     </div>
   )
 }
