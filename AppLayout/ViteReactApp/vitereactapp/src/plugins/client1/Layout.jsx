@@ -65,7 +65,8 @@ class Layout extends React.Component {
           <Item>
             <Location
               row={2}
-              col={1}
+              col={0}
+              colspan={3}
               screen="lg"
             ></Location>
             <Location
@@ -78,21 +79,7 @@ class Layout extends React.Component {
               {this.props.children}
             </div>
           </Item>
-          <Item>
-            <Location
-              row={2}
-              col={0}
-              screen="lg"
-            ></Location>
-            <Location
-              row={2}
-              col={0}
-              screen="sm"
-            ></Location>
-            <div className="left-side-bar item">
-              <Menu/>
-            </div>
-          </Item>
+
           <Item>
             <Location
               row={1}

@@ -3,11 +3,11 @@ import Layout from '@client-layout';
 
 function IndexPage() {
   return (
-  <Layout>
+ // <Layout>
     <div>
       <h1>Index</h1>
     </div>
-  </Layout>
+ // </Layout>
     
   )
 }

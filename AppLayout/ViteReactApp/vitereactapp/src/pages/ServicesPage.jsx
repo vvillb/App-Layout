@@ -3,11 +3,11 @@ import Layout from '@client-layout';
 
 function ServicesPage() {
   return (
-    <Layout>
+   // <Layout>
       <div>
-      <h1>Servicios</h1>
+      <h1>Atención e información</h1>
     </div>
-    </Layout>
+   // </Layout>
     
   )
 }

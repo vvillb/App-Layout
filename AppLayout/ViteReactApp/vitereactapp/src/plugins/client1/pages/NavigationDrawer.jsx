@@ -5,7 +5,14 @@ import "./NavigationDrawer.css";
 import { Toolbar, Item } from "devextreme-react/toolbar";
 
 import { Drawer } from "devextreme-react/drawer";
- 
+import NavigationList from "./NavigationLists";
+import DocumentsCheck from "../../../pages/DocumentsCheck";
+import ServicesPage from "../../../pages/ServicesPage";
+import { Route, Routes } from "react-router-dom";
+import AppRouter from "../../../router/AppRouter";
+import LoginPage from "../../../pages/LoginPage";
+import IndexPage from "../../../pages/IndexPage";
+
 function NavigationDrawer() {
     const [isOpened, setState] = useState(false);
     const buttonOptions = useMemo(() => {
@@ -16,6 +23,12 @@ function NavigationDrawer() {
             }
         };
     }, [isOpened]);
+    const renderList = useCallback(() => {
+        const stateHandler = (newState) => setState(newState);
+        return (
+            <NavigationList stateHandler={stateHandler} />
+        );
+    }, []);
     return (
         <div>
             <Toolbar id="toolbar">
@@ -28,10 +41,17 @@ function NavigationDrawer() {
 
                 minSize={37}
                 height={250}
-                render={ () => <div style={{width: 150 + "px"}}>Drawer content</div> }
+                render={ renderList }
                 opened={isOpened} 
             >
-                <div>View content</div>
+                <div id="view">
+                <Routes>
+                    <Route path='/docu' element={<DocumentsCheck/>}/> 
+                    <Route path='/index' element={<IndexPage/>}/> 
+                    <Route path='/' element={<LoginPage/>}/> 
+                    <Route path='/services' element={<ServicesPage/>}/> 
+                </Routes>
+                </div>
             </Drawer>
         </div>
     );

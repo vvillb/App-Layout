@@ -6,11 +6,11 @@ import Drawer from 'devextreme-react/drawer';
 function DocumentsCheck() {
   return (
   
-  <Layout>
+  //<Layout>
     <div>
-      <h1>Consulta de documentos</h1>
+      <h1>Carpeta ciudadana</h1>
     </div>
-  </Layout>
+  //</Layout>
   )
 }
 

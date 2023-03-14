@@ -1,29 +1,12 @@
 import React, { useCallback } from "react";
 import List from "devextreme-react/list";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
- 
+
 const navigation = [
-    { id: 1, text: "Atención e información", icon: "message", path: "../../../pages/DocumentsCheck.jsx" },
-    { id: 2, text: "Carpeta ciudadana", icon: "check", path: "../../../pages/IndexPage.jsx" }
+    { id: 1, text: "Carpeta ciudadana", icon: "folder", path: "../../../docu" },
+    { id: 2, text: "Atención e información", icon: "info", path: "../../../services" }
 ];
-
-
-/*In React, you can define the types and structure of the props that a component 
-receives using the propTypes property or the prop-types library.
-
-The error message ("'stateHandler' is missing in props validation")indicates that 
-you have not defined a prop named stateHandler in your propTypes validation.
-
-To fix this error, you need to add the stateHandler prop to your NavigationList component's propTypes validation, like this:*/
-NavigationList.propTypes = {
-    stateHandler: PropTypes.func.isRequired
-  };
-/*In this example, we are using the PropTypes object from the prop-types library to define that the stateHandler 
-prop is required and should be a function. You can adjust the validation according to your needs.*/
-
-
-
+ 
 function NavigationList(props){
     const closeDrawer = () => {
         props.stateHandler(false);
