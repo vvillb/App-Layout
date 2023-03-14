@@ -1,25 +1,30 @@
-import i18n from "i18next";
-import { reactI18nextModule } from "react-i18next";
-import {translationES} from "./plugins/client1/i18n/es/client.json"
-import './plugins/client1/i18n/es/client.json';
+import i18n, {setDefaultNamespace} from "i18next";
+//import { reactI18nextModule } from "react-i18next";
+import translationES from "./locales/es/translation.json"
+import translationClientEs from '@client-i18n_es';
+import { initReactI18next } from 'react-i18next';
 
+const resources={
+  /*en:{
+    translation: enTranslation,
+  },*/
+  es:{
+    common:translationES,
+    client:translationClientEs
+  }
+};
 
 i18n
-  .use(reactI18nextModule) // passes i18n down to react-i18next
+  .use(initReactI18next)
   .init({
-    lng: "es",
-    keySeparator: false,
-    interpolation: {
-      escapeValue: false
+    lng:"es",
+    interpolation:{
+      escapeValue:false
     },
-    resources:{
-        es: {
-          translation: {translationES},
-        },}
-    
-
-
-    });
-  
+    ns:['common','client'],
+    defaultNS: 'common',
+    resources
+  });
+setDefaultNamespace:('common');
 
 export default i18n

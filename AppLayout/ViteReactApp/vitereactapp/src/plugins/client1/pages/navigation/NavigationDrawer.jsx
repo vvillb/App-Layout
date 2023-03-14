@@ -6,7 +6,7 @@ import { Toolbar, Item } from "devextreme-react/toolbar";
 
 import { Drawer } from "devextreme-react/drawer";
 import NavigationList from "./NavigationLists";
-import AppRouter from "../../../router/AppRouter";
+import AppRouter from "../../../../router/AppRouter";
 
 function NavigationDrawer() {
     const [isOpened, setState] = useState(false);
