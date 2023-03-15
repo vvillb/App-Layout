@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ResponsiveBox, {
   Row,
   Col,
@@ -7,7 +6,6 @@ import ResponsiveBox, {
   Location,
 } from 'devextreme-react/responsive-box';
 import Header from './pages/Header';
-import Menu from './pages/Menu';
 import Breadcrumbs from './pages/Breadcrumbs';
 import Footer from './pages/Footer';
 import 'devextreme/dist/css/dx.light.css';
