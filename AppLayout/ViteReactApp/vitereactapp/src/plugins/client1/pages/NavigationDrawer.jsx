@@ -6,7 +6,12 @@ import { Toolbar, Item } from "devextreme-react/toolbar";
 
 import { Drawer } from "devextreme-react/drawer";
 import NavigationList from "./NavigationLists";
+import DocumentsCheck from "../../../pages/DocumentsCheck";
+import ServicesPage from "../../../pages/ServicesPage";
+import { Route, Routes } from "react-router-dom";
 import AppRouter from "../../../router/AppRouter";
+import LoginPage from "../../../pages/LoginPage";
+import IndexPage from "../../../pages/IndexPage";
 
 function NavigationDrawer() {
     const [isOpened, setState] = useState(false);
@@ -40,7 +45,12 @@ function NavigationDrawer() {
                 opened={isOpened} 
             >
                 <div id="view">
-                <AppRouter/>
+                <Routes>
+                    <Route path='/docu' element={<DocumentsCheck/>}/> 
+                    <Route path='/index' element={<IndexPage/>}/> 
+                    <Route path='/' element={<LoginPage/>}/> 
+                    <Route path='/services' element={<ServicesPage/>}/> 
+                </Routes>
                 </div>
             </Drawer>
         </div>
