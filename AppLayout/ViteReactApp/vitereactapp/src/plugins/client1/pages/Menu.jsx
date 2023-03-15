@@ -1,6 +1,6 @@
 import React from 'react'
 import NavMenu from '../../../assets/elements/Menu/NavMenu'
-import NavigationDrawer from './navigation/NavigationDrawer'
+import NavigationDrawer from './NavigationDrawer'
 
 function Menu() {
   return (

@@ -14,7 +14,7 @@ import 'devextreme/dist/css/dx.light.css';
 import '../common/index.css'
 import '../common/App.css'
 import './Style1.css'
-import NavigationDrawer from './pages/navigation/NavigationDrawer';
+import NavigationDrawer from './pages/NavigationDrawer';
 
 function screen(width) {
   return (width < 700) ? 'sm' : 'lg';
