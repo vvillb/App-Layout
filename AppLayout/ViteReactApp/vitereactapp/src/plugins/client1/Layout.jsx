@@ -14,7 +14,7 @@ import 'devextreme/dist/css/dx.light.css';
 import '../common/index.css'
 import '../common/App.css'
 import './Style1.css'
-import NavigationDrawer from './pages/NavigationDrawer';
+//import NavigationDrawer from './pages/NavigationDrawer';
 
 function screen(width) {
   return (width < 700) ? 'sm' : 'lg';
@@ -31,8 +31,6 @@ node to be passed as a prop, including other components, text, and elements.    
 class Layout extends React.Component {
   render() {
     return (
-      
-      
       <div id="page">
         <ResponsiveBox
           singleColumnScreen="sm"
@@ -79,7 +77,7 @@ class Layout extends React.Component {
               {this.props.children}
             </div>
           </Item>
-
+          
           <Item>
             <Location
               row={1}

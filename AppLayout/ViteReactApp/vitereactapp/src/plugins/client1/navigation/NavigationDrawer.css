@@ -16,3 +16,6 @@ border: none;
 .dx-toolbar-button > .dx-toolbar-item-content {
 margin-left: -7px;
 }
+.dx-list-item-icon {
+    margin-right: 10px;
+}

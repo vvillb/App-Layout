@@ -1,16 +1,16 @@
 import React from 'react'
 import Layout from '@client-layout';
-import Drawer from 'devextreme-react/drawer';
+//mport Drawer from 'devextreme-react/drawer';
 
 
 function DocumentsCheck() {
   return (
   
-  //<Layout>
+  <Layout>
     <div>
-      <h1>Carpeta ciudadana</h1>
+      <h1>Consulta de documentos</h1>
     </div>
-  //</Layout>
+  </Layout>
   )
 }
 
