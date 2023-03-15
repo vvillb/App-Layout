@@ -11,6 +11,7 @@ import ServicesPage from "../../../pages/ServicesPage";
 import { Route, Routes } from "react-router-dom";
 import LoginPage from "../../../pages/LoginPage";
 import IndexPage from "../../../pages/IndexPage";
+import AppRouter from "../../../router/AppRouter";
 
 function NavigationDrawer() {
     const [isOpened, setState] = useState(false);
@@ -44,12 +45,7 @@ function NavigationDrawer() {
                 opened={isOpened} 
             >
                 <div id="view">
-                <Routes>
-                    <Route path='/docu' element={<DocumentsCheck/>}/> 
-                    <Route path='/index' element={<IndexPage/>}/> 
-                    <Route path='/' element={<LoginPage/>}/> 
-                    <Route path='/services' element={<ServicesPage/>}/> 
-                </Routes>
+                <AppRouter/>
                 </div>
             </Drawer>
         </div>
