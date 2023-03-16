@@ -1,9 +1,10 @@
 import React from 'react'
+import NavMenu from '../../../components/Menu/NavMenu'
 
 function Menu() {
   return (
     <div>
-      <h1>Menú de Navegación</h1>
+      <NavMenu/>
     </div>
   )
 }

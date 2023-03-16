@@ -4,34 +4,13 @@ import service from './Data.jsx';
 import './style.css';
 import {
   
+  Link,
   useLocation,
   useNavigate,
   useParams,
   } from "react-router-dom";
 
 
-
-
-function screen(width) {
-  return (width < 700) ? 'horizontal' : 'vertical';
-}
-/*-----------WRAPPER?---------
-function withRouter(Component) {
-  function ComponentWithRouterProp(props) {
-    let location = useLocation();
-    const navigate = useNavigate();
-    let params = useParams();
-    return (
-      <Component
-        {...props}
-        router={{ location, navigate, params}}
-      />
-    );
-  }
-
-  return ComponentWithRouterProp;
-}
----------------------------*/
 class NavMenu extends React.Component {
 
   constructor(props) {
@@ -46,7 +25,7 @@ class NavMenu extends React.Component {
     }];
     this.state = {
       showFirstSubmenuModes: this.showSubmenuModes[1],
-      orientation: screen(window.innerWidth),
+      
       hideSubmenuOnMouseLeave: false,
       currentProduct: null,
     };
@@ -55,23 +34,11 @@ class NavMenu extends React.Component {
     this.orientationChanged = this.orientationChanged.bind(this);
     this.hideSubmenuOnMouseLeaveChanged = this.hideSubmenuOnMouseLeaveChanged.bind(this);
   }
-  componentDidMount() {
-    window.addEventListener('resize', this.handleResize);
-  }
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.handleResize);
-  }
-
-  handleResize = () => {
-    this.setState({
-      orientation: screen(window.innerWidth),
-    });
-  };
 
   render() {
     const {
-      showFirstSubmenuModes, orientation, hideSubmenuOnMouseLeave, currentProduct,
+      showFirstSubmenuModes, hideSubmenuOnMouseLeave, currentProduct,
     } = this.state;
     
       
@@ -79,10 +46,11 @@ class NavMenu extends React.Component {
       <div className="form">
         <div>
           <div className="label">Navegación:</div>
+          
           <Menu dataSource={this.products}
             displayExpr="name"
             showFirstSubmenuMode={showFirstSubmenuModes}
-            orientation={orientation}
+            orientation="horizontal"
             hideSubmenuOnMouseLeave={hideSubmenuOnMouseLeave}
             onItemClick={this.itemClick}
           />
@@ -91,21 +59,24 @@ class NavMenu extends React.Component {
             <img src={currentProduct.icon} />
             <div className="name">{currentProduct.name}</div>
           </div>
+          
           }
-        
+
         
         </div>
       </div>
     );
   }
 
-  /*-----------error: Cannot read properties of null (reading 'path')----------------------------------------------------------------*/
 
-  itemClick = (props) => {
-    const { navigate, currentProduct } = this.state;
-    navigate(currentProduct.path); // navigate to the new page
+  itemClick(e) {
+    if (e.itemData.price) {
+      this.setState({
+        currentProduct: e.itemData,
+      });
+    }
   }
-  
+
   showSubmenuModeChanged(e) {
     this.setState({
       showFirstSubmenuModes: e.value,
