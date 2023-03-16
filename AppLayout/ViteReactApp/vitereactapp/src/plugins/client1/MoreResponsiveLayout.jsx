@@ -36,9 +36,10 @@ class MoreResponsiveLayout extends React.Component {
         <ResponsiveBox
           singleColumnScreen="xs"
           screenByWidth={GetScreenSize}>
-          <Row ratio={4}></Row>
-          <Row ratio={1}></Row>
-          <Row ratio={10}></Row>
+          <Row ratio={8}></Row>
+          <Row ratio={2}></Row>
+          <Row ratio={2}></Row>
+          <Row ratio={20}></Row>
           <Row ratio={1}></Row>
 
           <Col ratio={1}></Col>
@@ -76,26 +77,55 @@ class MoreResponsiveLayout extends React.Component {
             </div>
           </Item>
           <Item>
-          <Location
-              row={2}
+            <Location
+              row={1}
               col={0}
               colspan={3}
               screen="xl"
             ></Location>
             <Location
-              row={2}
+              row={1}
               col={0}
               colspan={3}
               screen="lg"
             ></Location>
             <Location
-              row={2}
+              row={1}
               col={0}
               colspan={3}
               screen="md"
             ></Location>
             <Location
-              row={2}
+              row={1}
+              col={0}
+              colspan={3}
+              screen="sm"
+            ></Location>
+            <div className="menu item">
+              <Menu/>
+            </div>
+          </Item>
+          <Item>
+          <Location
+              row={3}
+              col={0}
+              colspan={3}
+              screen="xl"
+            ></Location>
+            <Location
+              row={3}
+              col={0}
+              colspan={3}
+              screen="lg"
+            ></Location>
+            <Location
+              row={3}
+              col={0}
+              colspan={3}
+              screen="md"
+            ></Location>
+            <Location
+              row={3}
               col={0}
               colspan={3}
               screen="sm"
@@ -107,25 +137,25 @@ class MoreResponsiveLayout extends React.Component {
           
           <Item>
           <Location
-              row={1}
+              row={2}
               col={0}
               colspan={3}
               screen="xl"
             ></Location>
             <Location
-              row={1}
+              row={2}
               col={0}
               colspan={3}
               screen="lg"
             ></Location>
             <Location
-              row={1}
+              row={2}
               col={0}
               colspan={3}
               screen="md"
             ></Location>
             <Location
-              row={1}
+              row={2}
               col={0}
               colspan={3}
               screen="sm"
@@ -136,25 +166,25 @@ class MoreResponsiveLayout extends React.Component {
           </Item>
           <Item>
           <Location
-              row={3}
+              row={4}
               col={0}
               colspan={3}
               screen="xl"
             ></Location>
             <Location
-              row={3}
+              row={4}
               col={0}
               colspan={3}
               screen="lg"
             ></Location>
             <Location
-              row={3}
+              row={4}
               col={0}
               colspan={3}
               screen="md"
             ></Location>
             <Location
-              row={3}
+              row={4}
               col={0}
               colspan={3}
               screen="sm"
