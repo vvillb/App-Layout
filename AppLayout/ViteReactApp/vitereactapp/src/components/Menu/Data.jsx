@@ -1,7 +1,7 @@
 const products = [{
     id: '1',
     name: 'Atención e información',
-    path:'/index',
+    path:'/docu',
     items: [{
       id: '1_1',
       name: 'Catálogo de trámites',

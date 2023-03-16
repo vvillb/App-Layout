@@ -4,11 +4,11 @@ import MoreResponsiveLayout from '../plugins/client1/MoreResponsiveLayout';
 
 function ServicesPage() {
   return (
-<Layout>
+<MoreResponsiveLayout>
       <div>
       <h1>Atención e información</h1>
     </div>
-</Layout>
+</MoreResponsiveLayout>
     
   )
 }

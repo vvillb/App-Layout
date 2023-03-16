@@ -6,7 +6,7 @@ function LoginPage() {
   return (
     <MoreResponsiveLayout>
       <div>
-      <h1>Login</h1>
+      <h1>Inicio</h1>
     </div>
     </MoreResponsiveLayout>  
   )

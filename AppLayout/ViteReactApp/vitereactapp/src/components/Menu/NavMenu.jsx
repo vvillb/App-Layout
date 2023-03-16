@@ -38,7 +38,7 @@ class NavMenu extends React.Component {
 
   render() {
     const {
-      showFirstSubmenuModes, hideSubmenuOnMouseLeave, currentProduct,
+      showFirstSubmenuModes,  hideSubmenuOnMouseLeave, currentProduct,
     } = this.state;
     
       
@@ -46,14 +46,14 @@ class NavMenu extends React.Component {
       <div className="form">
         <div>
           <div className="label">Navegación:</div>
-          
+          <Link to={this.path}>
           <Menu dataSource={this.products}
             displayExpr="name"
             showFirstSubmenuMode={showFirstSubmenuModes}
             orientation="horizontal"
             hideSubmenuOnMouseLeave={hideSubmenuOnMouseLeave}
             onItemClick={this.itemClick}
-          />
+          /></Link>
           {currentProduct
           && <div id="product-details" >
             <img src={currentProduct.icon} />
