@@ -4,13 +4,11 @@ import MoreResponsiveLayout from '../plugins/client1/MoreResponsiveLayout';
 
 function LoginPage() {
   return (
-    <Layout>
-
+    <MoreResponsiveLayout>
       <div>
       <h1>Login</h1>
     </div>
-
-  </Layout>  
+    </MoreResponsiveLayout>  
   )
 }
 

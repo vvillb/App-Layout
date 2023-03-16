@@ -42,14 +42,17 @@ class MoreResponsiveLayout extends React.Component {
           <Row ratio={1}></Row>
 
           <Col ratio={1}></Col>
-          <Col ratio={2} screen="sm"></Col>
-          <Col ratio={2} screen="md"></Col>
-          <Col ratio={2} screen="lg"></Col>
-          <Col ratio={2} screen="xl"></Col>
+          <Col ratio={2} ></Col>
 
-           <div className='desktop-only'>
-            <Menu/>
+           
+         
           <Item>
+            <Location
+              row={0}
+              col={0}
+              colspan={3}
+              screen="xl"
+            ></Location>
             <Location
               row={0}
               col={0}
@@ -59,7 +62,13 @@ class MoreResponsiveLayout extends React.Component {
             <Location
               row={0}
               col={0}
-              colspan={2}
+              colspan={3}
+              screen="md"
+            ></Location>
+            <Location
+              row={0}
+              col={0}
+              colspan={3}
               screen="sm"
             ></Location>
             <div className="header item">
@@ -67,6 +76,12 @@ class MoreResponsiveLayout extends React.Component {
             </div>
           </Item>
           <Item>
+          <Location
+              row={2}
+              col={0}
+              colspan={3}
+              screen="xl"
+            ></Location>
             <Location
               row={2}
               col={0}
@@ -74,9 +89,15 @@ class MoreResponsiveLayout extends React.Component {
               screen="lg"
             ></Location>
             <Location
-              row={3}
+              row={2}
               col={0}
-              colspan={2}
+              colspan={3}
+              screen="md"
+            ></Location>
+            <Location
+              row={2}
+              col={0}
+              colspan={3}
               screen="sm"
             ></Location>
             <div className="content item">
@@ -85,6 +106,12 @@ class MoreResponsiveLayout extends React.Component {
           </Item>
           
           <Item>
+          <Location
+              row={1}
+              col={0}
+              colspan={3}
+              screen="xl"
+            ></Location>
             <Location
               row={1}
               col={0}
@@ -93,7 +120,14 @@ class MoreResponsiveLayout extends React.Component {
             ></Location>
             <Location
               row={1}
-              col={1}
+              col={0}
+              colspan={3}
+              screen="md"
+            ></Location>
+            <Location
+              row={1}
+              col={0}
+              colspan={3}
               screen="sm"
             ></Location>
             <div className="right-side-bar item">
@@ -101,6 +135,12 @@ class MoreResponsiveLayout extends React.Component {
             </div>
           </Item>
           <Item>
+          <Location
+              row={3}
+              col={0}
+              colspan={3}
+              screen="xl"
+            ></Location>
             <Location
               row={3}
               col={0}
@@ -110,14 +150,20 @@ class MoreResponsiveLayout extends React.Component {
             <Location
               row={3}
               col={0}
-              colspan={2}
+              colspan={3}
+              screen="md"
+            ></Location>
+            <Location
+              row={3}
+              col={0}
+              colspan={3}
               screen="sm"
             ></Location>
             <div className="footer item">
               <Footer/>
             </div>
           </Item>
-          </div>
+          
         </ResponsiveBox>
       </div>
     );

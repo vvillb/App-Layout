@@ -10,7 +10,7 @@ function AppRouter() {
         <Routes>
             <Route path='/docu' element={<DocumentsCheck/>}/> 
             <Route path='/index' element={<IndexPage/>}/> 
-            <Route path='/' element={<LoginPage/>}/> 
+            <Route path='*' element={<LoginPage/>}/> 
             <Route path='/services' element={<ServicesPage/>}/> 
         </Routes>
   )
