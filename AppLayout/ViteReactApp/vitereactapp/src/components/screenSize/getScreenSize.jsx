@@ -14,7 +14,7 @@ function GetScreenSize() {
   } else if (width >= 1200) {
     size = 'xl';
   }
-return(size)
+return(size);
   
 }
 
