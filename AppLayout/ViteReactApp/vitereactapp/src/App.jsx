@@ -3,6 +3,7 @@ import { BrowserRouter} from 'react-router-dom'
 import Layout from './plugins/client1/Layout'
 import NavigationDrawer from './components/Menu/DrawerMenu/NavigationDrawer'
 import AppRouter from './router/AppRouter'
+import Parent from './plugins/client1/Parent'
 
 
 function App() {
@@ -10,8 +11,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
-    <AppRouter/>
-      
+       <Parent/>
     </BrowserRouter>
     </>
   )

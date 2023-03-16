@@ -28,9 +28,7 @@ class MoreResponsiveLayout extends React.Component {
   render() {
     const screenSize = GetScreenSize();
 
-  if (screenSize === 'xs') {
-    return <NavigationDrawer>{this.props.children}</NavigationDrawer>;
-  }
+  
     return (
       <div id="page">
         <ResponsiveBox
@@ -43,7 +41,11 @@ class MoreResponsiveLayout extends React.Component {
           <Row ratio={1}></Row>
 
           <Col ratio={1}></Col>
-          <Col ratio={2} ></Col>
+          <Col ratio={2} screen="sm"></Col>
+          <Col ratio={2} screen="md"></Col>
+          <Col ratio={2} screen="lg"></Col>
+          <Col ratio={2} screen="xl"></Col>
+
 
            
          
@@ -71,6 +73,12 @@ class MoreResponsiveLayout extends React.Component {
               col={0}
               colspan={3}
               screen="sm"
+            ></Location>
+            <Location
+              row={0}
+              col={0}
+              colspan={2}
+              screen="xs"
             ></Location>
             <div className="header item">
               <Header/>
@@ -130,6 +138,12 @@ class MoreResponsiveLayout extends React.Component {
               colspan={3}
               screen="sm"
             ></Location>
+            <Location
+              row={3}
+              col={0}
+              colspan={2}
+              screen="xs"
+            ></Location>
             <div className="content item">
               {this.props.children}
             </div>
@@ -160,6 +174,11 @@ class MoreResponsiveLayout extends React.Component {
               colspan={3}
               screen="sm"
             ></Location>
+            <Location
+              row={1}
+              col={1}
+              screen="xs"
+            ></Location>
             <div className="right-side-bar item">
               <Breadcrumbs/>
             </div>
@@ -188,6 +207,12 @@ class MoreResponsiveLayout extends React.Component {
               col={0}
               colspan={3}
               screen="sm"
+            ></Location>
+            <Location
+              row={3}
+              col={0}
+              colspan={2}
+              screen="xs"
             ></Location>
             <div className="footer item">
               <Footer/>

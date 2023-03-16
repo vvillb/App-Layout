@@ -4,10 +4,7 @@ import service from './Data.jsx';
 import './style.css';
 import './Data.jsx';
 import {
-  Link,
-  useLocation,
-  useNavigate,
-  useParams,
+  Link
 } from "react-router-dom";
 
 class NavMenu extends React.Component {
@@ -91,6 +88,11 @@ class NavMenu extends React.Component {
   }
 
   itemClick(e, updateRoute) {
+    if (e.itemData.price) {
+      this.setState({
+        currentProduct: e.itemData,
+      });
+    }
     if (!this.state.mounted) { // added
       return;
     }
