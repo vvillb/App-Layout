@@ -4,6 +4,7 @@ import Layout from './plugins/client1/Layout'
 import NavigationDrawer from './components/Menu/DrawerMenu/NavigationDrawer'
 import AppRouter from './router/AppRouter'
 import Parent from './plugins/client1/Parent'
+import MoreResponsiveLayout from './plugins/client1/MoreResponsiveLayout'
 
 
 function App() {
@@ -11,7 +12,9 @@ function App() {
   return (
     <>
     <BrowserRouter>
-       <Parent/>
+            <NavigationDrawer/>
+            <AppRouter/>
+        
     </BrowserRouter>
     </>
   )

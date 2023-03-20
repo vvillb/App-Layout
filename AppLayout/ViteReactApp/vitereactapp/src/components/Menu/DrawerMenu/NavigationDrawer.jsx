@@ -41,7 +41,7 @@ function NavigationDrawer() {
         );
     }, []);
     return (
-        <div>
+        <div className="test"> 
             <Toolbar id="toolbar">
                 <Item 
                     widget="dxButton" 
@@ -56,7 +56,7 @@ function NavigationDrawer() {
                 opened={isOpened} 
             >
                 <div id="view">
-                <Routes>
+               {/*<Routes>
                     <Route path='/docu' element={<DocumentsCheck/>}/> 
                     <Route path='/index' element={<IndexPage/>}/> 
                     <Route path='*' element={<LoginPage/>}/> 
@@ -69,7 +69,7 @@ function NavigationDrawer() {
                     <Route path='/CarpetaCiudadana/MisExpedientes' element={<MisExpedientes/>}/>
                     <Route path='/CarpetaCiudadana/MisNotificaciones' element={<MisNotificaciones/>}/>
                     <Route path='/CarpetaCiudadana/MisSolicitudes' element={<MisSolicitudes/>}/>
-                </Routes>
+    </Routes>*/} 
                 </div>
             </Drawer>
         </div>
