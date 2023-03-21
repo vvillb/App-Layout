@@ -1,0 +1,31 @@
+
+{
+    "common":{
+        "save":"Guardar",
+        "cancel":"Cancelar",
+        "delete":"Eliminar",
+        "error":"Error",
+        "success":"Éxito",
+        "loading":"Cargando...",
+        "noData":"No hay datos disponibles",
+        "confirmDelete":"¿Está seguro que desea eliminar este registro?"
+    },
+    "home":{
+        "welcome":"Bienvenido a la página principal",
+        "featuredProducts":"Productos destacados",
+        "viewDetails":"Ver detalles",
+        "addToCart":"Añadir al carrito",
+        "cart":"Carrito de compras"
+    },
+    "admin":{
+        "dashboard":"Panel de control",
+        "users":"Usuarios",
+        "addUser":"Agregar usuario",
+        "editUser":"Editar usuario",
+        "deleteUser":"Eliminar usuario",
+        "roles":"Roles",
+        "addRole":"Agregar rol",
+        "editRole":"Editar rol",
+        "deleteRole":"Eliminar rol"
+    }
+}

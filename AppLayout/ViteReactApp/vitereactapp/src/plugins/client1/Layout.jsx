@@ -7,10 +7,10 @@ import ResponsiveBox, {
   Item,
   Location,
 } from 'devextreme-react/responsive-box';
-import Header from './pages/Header';
-import Menu from './pages/Menu';
-import Breadcrumbs from './pages/Breadcrumbs';
-import Footer from './pages/Footer';
+import Header from '../../components/partesPagina/Header';
+import Menu from '../../components/partesPagina/Menu';
+import Breadcrumbs from '../../components/partesPagina/Breadcrumbs';
+import Footer from '../../components/partesPagina/Footer';
 import 'devextreme/dist/css/dx.light.css';
 import '../common/index.css'
 import '../common/App.css'

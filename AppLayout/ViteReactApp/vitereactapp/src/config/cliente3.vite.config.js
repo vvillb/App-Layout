@@ -18,6 +18,7 @@ export default defineConfig({
     resolve:{
         alias:{
             '@client-layout':`../../src/plugins/client3/Layout.jsx`,
+            '@client-i18n_es':`../../src/plugins/client3/i18n/es/client.json`
         }
     }
 })
