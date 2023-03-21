@@ -25,10 +25,10 @@ class NavMenu extends React.Component {
       showFirstSubmenuModes: this.showSubmenuModes[1],
       hideSubmenuOnMouseLeave: false,
       currentProduct: null,
-      mounted: false, // added
+      mounted: false,
     };
     this.itemClick = this.itemClick.bind(this);
-    this.showSubmenuModeChanged.bind = this.showSubmenuModeChanged(this);
+    this.showSubmenuModeChanged= this.showSubmenuModeChanged.bind(this);
     this.orientationChanged = this.orientationChanged.bind(this);
    
   }
@@ -53,7 +53,7 @@ class NavMenu extends React.Component {
       <div className="form">
         <div>
           <div className="label">Navegación:</div>
-          {currentProduct ? (
+          {currentProduct && (
             <Link to={currentProduct.path}>
               <Menu
                 dataSource={currentProduct.items}
@@ -61,6 +61,7 @@ class NavMenu extends React.Component {
                 showFirstSubmenuMode={showFirstSubmenuModes}
                 orientation="horizontal"
                 hideSubmenuOnMouseLeave={hideSubmenuOnMouseLeave}
+                submenuDirection="auto" // added
                 onItemClick={(e) => {
                   this.setState({
                     currentProduct: e.itemData,
@@ -68,20 +69,21 @@ class NavMenu extends React.Component {
                 }}
               />
             </Link>
-          ) : (
+          ) }
             <Menu
               dataSource={this.products}
               displayExpr="name"
               showFirstSubmenuMode={showFirstSubmenuModes}
               orientation="horizontal"
               hideSubmenuOnMouseLeave={hideSubmenuOnMouseLeave}
+              submenuDirection="auto" // added
               onItemClick={(e) => {
                 this.setState({
                   currentProduct: e.itemData,
                 });
               }}
             />
-          )}
+          
         </div>
       </div>
     );
@@ -93,10 +95,10 @@ class NavMenu extends React.Component {
         currentProduct: e.itemData,
       });
     }
-    if (!this.state.mounted) { // added
+    if (!this.state.mounted) {
       return;
     }
-    console.log(e.itemData); // Check the value of e.itemData
+    console.log(e.itemData);
     const path = e.itemData.path;
     if (path) {
       updateRoute(path);
