@@ -1,5 +1,6 @@
 import {defineConfig} from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
 export default defineConfig({
     plugins:[react({
@@ -15,8 +16,8 @@ export default defineConfig({
   })],
     resolve:{
         alias:{
-            '@client-layout':`../../src/plugins/client1/Layout.jsx`,
-            '@client-i18n_es':`../../src/plugins/client1/i18n/es/client.json`
-        }
+          '@client-layout':path.resolve(__dirname,'../plugins/client1/Layout.jsx'),
+          '@client-i18n_es':path.resolve(__dirname,'../../src/plugins/client1/i18n/es/client.json')
+      }
     }
 })

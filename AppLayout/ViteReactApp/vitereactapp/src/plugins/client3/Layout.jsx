@@ -15,8 +15,6 @@ import 'devextreme/dist/css/dx.light.css';
 import '../common/index.css'
 import '../common/App.css'
 import './Style3.css'
-import useScreenSize from '../../hooks/useScreenSize';
-import NavigationDrawer from '../../components/Menu/DrawerMenu/NavigationDrawer';
 
 function Layout({children}) {
     
