@@ -53,9 +53,9 @@ class NavMenu extends React.Component {
       <div className="form">
         <div>
           <div className="label">Navegación:</div>
-          {currentProduct && (
+          {currentProduct ? (
             <Link to={currentProduct.path}>
-              <Menu
+              <Menu 
                 dataSource={currentProduct.items}
                 displayExpr="name"
                 showFirstSubmenuMode={showFirstSubmenuModes}
@@ -69,7 +69,7 @@ class NavMenu extends React.Component {
                 }}
               />
             </Link>
-          ) }
+          ) : (
             <Menu
               dataSource={this.products}
               displayExpr="name"
@@ -83,7 +83,7 @@ class NavMenu extends React.Component {
                 });
               }}
             />
-          
+            )}
         </div>
       </div>
     );

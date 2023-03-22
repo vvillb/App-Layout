@@ -20,12 +20,12 @@ import NavigationDrawer from '../../components/Menu/DrawerMenu/NavigationDrawer'
 
 function Layout({children}) {
     
-  const screenSize = useScreenSize()
+
 
   return (
     <div id="page">
       
-      { screenSize === 'xs' &&  <NavigationDrawer/> }
+      
       <ResponsiveBox
         singleColumnScreen="xs"
         >
@@ -104,6 +104,12 @@ function Layout({children}) {
             col={0}
             colspan={3}
             screen="sm"
+          ></Location>
+          <Location
+            row={1}
+            col={0}
+            colspan={3}
+            screen="xs"
           ></Location>
           <div className="menu item">
             <Menu/>
