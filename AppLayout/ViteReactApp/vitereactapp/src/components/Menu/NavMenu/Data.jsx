@@ -2,7 +2,7 @@ const products = [{
     id: '1',
     name: 'Atención e información',
     path:'/docu',
-    items: [{
+    subItems: [{
       id: '1_1',
       name: 'Catálogo de trámites',
       icon: 'columnchooser',
@@ -27,7 +27,7 @@ const products = [{
     id: '2',
     name: 'Carpeta ciudadana',
     path:'/services',
-    items: [{
+    subItems: [{
       id: '2_1',
       name: 'Mis documentos ',
       icon: 'columnchooser',
@@ -49,9 +49,8 @@ const products = [{
       path:'/CarpetaCiudadana/MisNotificaciones'
     },],
    }];
+
+
+
+export default products;
   
-  export default {
-    getProducts() {
-      return products;
-    },
-  };

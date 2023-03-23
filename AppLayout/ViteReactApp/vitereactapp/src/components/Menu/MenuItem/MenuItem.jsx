@@ -3,36 +3,66 @@ import 'devextreme/dist/css/dx.light.css';
 import Menu, { Item } from 'devextreme-react/menu';
 import useScreenSize from '../../../hooks/useScreenSize'
 import { Link } from 'react-router-dom';
-import CheckBox from 'devextreme-react/check-box';
-
-
+import products from '../NavMenu/Data.jsx'
 
 
 function MenuItem() {
     //const[click,setClick]=useState(false)
-    const [toggle, setToggle] = useState(false);
+    const toggle=true;
     //const handleClick=()=>setClick(!click)
     //const closeSubMenu=()=>setClick(false)
-    
-    /*const ScreenSize={useScreenSize}
-    const onScreenChange=()=>{
-        if (ScreenSize==="xs"){
-            setToggle(true);}
-            else{
-                setToggle(false);
-            }
-        };*/
-        //prueba del toggle
-        
-       
-        ///////
-        const onValueChanged = useCallback((e) => {
-                setToggle(e.value);
-            }, []);
-        /*
-    useEffect(()=>{
-        onScreenChange();
-    },[]);*/
+   /* const products = [{
+        id: '1',
+        name: 'Atención e información',
+        path:'/docu',
+        subItems: [{
+          id: '1_1',
+          name: 'Catálogo de trámites',
+          icon: 'columnchooser',
+          path:'/AtencionEInformacion/Catalogo'
+        }, {
+          id: '1_2',
+          name: 'Tablón de anuncios',
+          icon: 'key',
+          path:'/AtencionEInformacion/Tablon'
+        },{
+          id: '1_3',
+          name: 'Quejas y sugerencias',
+          icon: 'group',
+          path:'/AtencionEInformacion/Quejas'
+        },{
+          id: '1_4',
+          name: 'Verificación de documentos',
+          icon: 'key',
+          path:'/AtencionEInformacion/Verificacion'
+        },],
+      }, {
+        id: '2',
+        name: 'Carpeta ciudadana',
+        path:'/services',
+        subItems: [{
+          id: '2_1',
+          name: 'Mis documentos ',
+          icon: 'columnchooser',
+          path:'/CarpetaCiudadana/MisDocumentos'
+        }, {
+          id: '2_2',
+          name: 'Mis solicitudes',
+          icon: 'key',
+          path:'/CarpetaCiudadana/MisSolicitudes'
+        },{
+          id: '2_3',
+          name: 'Mis expedientes',
+          icon: 'group',
+          path:'/CarpetaCiudadana/MisExpedientes'
+        },{
+          id: '2_4',
+          name: 'Mis notificaciones',
+          icon: 'key',
+          path:'/CarpetaCiudadana/MisNotificaciones'
+        },],
+       }];*/
+
     return (
         
         
@@ -42,8 +72,14 @@ function MenuItem() {
                    // onItemClick={handleClick}
                     adaptivityEnabled={toggle}
                     >
-                
-                    <Item
+                    {products.map((item) => (
+                        <Item key={item.id} text={item.name} path={item.path} icon={item.icon}>
+                        {item.subItems && item.subItems.map((subItem) => (
+                        <Item key={subItem.id} text={subItem.name} path={subItem.path} icon={subItem.icon} />
+                        ))}
+                        </Item>
+                    ))}
+                   {/*<Item
                         text= "Atención e información"
                         path="/docu"
                         icon="info"
@@ -103,14 +139,10 @@ function MenuItem() {
                         icon="bell"
                         >                          
                         </Item>
-                    </Item>
+                    </Item>*/}
                 </Menu>
             </div>
-            <CheckBox
-                text="Enable adaptivity"
-                onValueChanged={onValueChanged}
-            >
-            </CheckBox>
+       
         </div>
     );
 }
