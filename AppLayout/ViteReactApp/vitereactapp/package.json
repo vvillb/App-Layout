@@ -4,10 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    
-    "dev:client1":"vite --config ./src/config/cliente1.vite.config.js",
-    "dev:client2":"vite --config ./src/config/cliente2.vite.config.js",
-    "dev:client3":"vite --config ./src/config/cliente3.vite.config.js",
+    "dev:client1": "vite --config ./src/config/cliente1.vite.config.js",
+    "dev:client2": "vite --config ./src/config/cliente2.vite.config.js",
+    "dev:client3": "vite --config ./src/config/cliente3.vite.config.js",
     "build:client1": "vite build --config ./src/config/cliente1.vite.config.js",
     "build:client2": "vite build --config ./src/config/cliente2.vite.config.js",
     "build:client3": "vite build --config ./src/config/cliente3.vite.config.js",
@@ -28,9 +27,11 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
-    "autoprefixer": "^10.4.13",
+    "autoprefixer": "^10.4.14",
     "eslint": "^8.35.0",
     "eslint-plugin-react": "^7.32.2",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7",
     "vite": "^4.1.0"
   }
 }
