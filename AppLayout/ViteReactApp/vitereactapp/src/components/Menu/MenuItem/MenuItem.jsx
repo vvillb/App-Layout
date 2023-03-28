@@ -1,29 +1,25 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import 'devextreme/dist/css/dx.light.css';
 import Menu, { Item } from 'devextreme-react/menu';
-import { useNavigate} from 'react-router-dom';
+import useScreenSize from '../../../hooks/useScreenSize'
+import { Link } from 'react-router-dom';
 import products from '../NavMenu/Data.jsx'
 
 
 function MenuItem() {
+    //const[click,setClick]=useState(false)
     const toggle=true;
-    const navigate=useNavigate();
-
-    const handleClick=useCallback((e)=>{
-        const subItem=e.itemData;
-        if (subItem&&subItem.path){
-            navigate(subItem.path)
-        }
-    })
-    
+    //const handleClick=()=>setClick(!click)
+    //const closeSubMenu=()=>setClick(false)
+   
     return (
         
         
         <div>
             <div id="container">
                 <Menu  
+                   // onItemClick={handleClick}
                     adaptivityEnabled={toggle}
-                    onItemClick={handleClick}
                     >
                     {products.map((item) => (
                         <Item key={item.id} text={item.name} path={item.path} icon={item.icon}>
