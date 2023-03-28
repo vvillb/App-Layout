@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.demo-container,
+#page,
+#app {
+  height: 100%;
+  min-height: 300px;
+}
+
+.textHeader {
+  @apply text-slate-600 uppercase font-bold hover:text-cyan-700 transition-colors text-3xl !important;
+}
+
+.linkHeader {
+  @apply text-slate-600 hover:text-cyan-700 transition-colors text-lg !important;
+}
+
+#page p {
+  font-size: 20px;
+  padding-top: 10px;
+  text-align: center;
+}
