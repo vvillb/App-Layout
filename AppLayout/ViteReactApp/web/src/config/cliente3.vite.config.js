@@ -18,7 +18,9 @@ export default defineConfig({
     resolve:{
         alias:{
             '@client-layout':path.resolve(__dirname,'../plugins/client3/Layout.jsx'),
-            '@client-i18n_es':path.resolve(__dirname,'../../src/plugins/client3/i18n/es/client.json')
+            '@client-i18n_es':path.resolve(__dirname,'../../src/plugins/client3/i18n/es/client.json'),
+            '@client-menuData':path.resolve(__dirname,'../../src/plugins/client3/components/data/Data.jsx')
+
         }
     }
 })

@@ -1,7 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import Menu, { Item } from 'devextreme-react/menu';
-import products from '../NavMenu/Data.jsx'
 import { useNavigate } from 'react-router-dom';
+import products from '@client-menuData'
+
 
 
 function MenuItem(props) {
