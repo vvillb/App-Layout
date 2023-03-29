@@ -1,6 +1,4 @@
 import React from 'react'
-import NavMenu from '../../../components/Menu/NavMenu/NavMenu'
-import { useNavigate } from 'react-router-dom';
 import MenuItem from '../../../components/Menu/MenuItem/MenuItem';
 
 
