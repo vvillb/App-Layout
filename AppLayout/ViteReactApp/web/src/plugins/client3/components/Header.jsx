@@ -3,7 +3,7 @@ import React from 'react'
 function Header() {
 
   const style = {
-    backgroundImage: "url('imgs/background.jpg')"
+    backgroundImage: "url('/imgs/background.jpg')"
   }
 
   return (
