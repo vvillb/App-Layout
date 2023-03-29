@@ -15,10 +15,10 @@ function Menu() {
 */
 
 
-function Menu() {
+function Menu(props) {
   return (
-    <div className='sm:flex sm:justify-center dx-theme-border-color-as-background-color dx-theme-accent-as-text-color'>
-    <MenuItem/>
+    <div className='sm:flex sm:justify-center'>
+    <MenuItem orientation={props.orientation} />
     </div>
   )
 }

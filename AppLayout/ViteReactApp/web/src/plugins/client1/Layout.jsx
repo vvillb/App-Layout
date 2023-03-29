@@ -28,17 +28,22 @@ function Layout({children}) {
         <Header/>
       </header>
 
-      <nav>
-        <Menu/>
+      <nav className="sm:hidden">
+        <Menu orientation='horizontal'/>
       </nav>
 
-      <div>
+{/*       <div>
         <Breadcrumbs/>
       </div>
-
-      <main className="flex-grow dx-theme-background-color py-4 px-10 min-h-[300px]">
-        {children}
-      </main>
+ */}
+      <div className="flex-grow flex">
+        <nav className="w-48 hidden sm:visible sm:block dx-theme-border-color-as-background-color">
+          <Menu orientation='vertical'/>
+        </nav>
+        <main className="flex-grow dx-theme-background-color py-4 px-10 min-h-[300px]">
+          {children}
+        </main>
+      </div>
 
       <footer>
         <Footer/>
