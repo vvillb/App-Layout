@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '@client-layout';
+import {GetPost } from '../../models/components/GetPost'
 
 function Quejas() {
 
@@ -7,6 +8,7 @@ function Quejas() {
       <Layout>
           <div>
          <h1>Quejas y sugerencias</h1>
+         <GetPost/>
         </div>
       </Layout>
     )
