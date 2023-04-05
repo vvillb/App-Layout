@@ -1,4 +1,5 @@
 import { client } from "../../api/client";
+import ResponseAPI from "../responseAPI";
 
 const deletePost=async(id)=>{
     const { status } = await client.delete(`${id}`);

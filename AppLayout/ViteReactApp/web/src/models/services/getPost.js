@@ -1,4 +1,5 @@
 import {client} from '../../api/client'
+import ResponseAPI from "../responseAPI";
 
 const getPost = async () => {
     try {

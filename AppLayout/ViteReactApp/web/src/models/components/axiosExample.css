@@ -80,6 +80,7 @@ h1~button.axiosExample   {
     gap: 1em;
     padding: 1em 2em 0em 2em;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .grid-btn>button {

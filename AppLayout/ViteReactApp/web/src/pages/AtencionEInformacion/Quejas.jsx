@@ -4,7 +4,7 @@ import CreatePost from '../../models/components/CreatePost';
 import GetPost from '../../models/components/GetPost';
 import UpdatePost from '../../models/components/UpdatePost';
 import DeletePost from '../../models/components/DeletePost';
-
+import Button from 'devextreme-react/Button';
 
 function Quejas() {
 
@@ -28,12 +28,12 @@ function Quejas() {
           <div>
          <h1>Quejas y sugerencias</h1>
          <div>
-      <div className='grid-btn'>
-        <button onClick={() => setAction('get')}>Get</button>
-        <button onClick={() => setAction('post')}>Post</button>
-        <button onClick={() => setAction('delete')}>Delete</button>
-        <button onClick={() => setAction('put')}>Update</button>
-      </div>
+            <div className='grid-btn'>
+              <Button onClick={() => setAction('get')}>Ver todas</Button>
+              <Button onClick={() => setAction('post')}>Crear</Button>
+              <Button onClick={() => setAction('delete')}>Eliminar</Button>
+              <Button onClick={() => setAction('put')}>Modificar</Button>
+            </div>
 
       {showActionComponent()}
     </div>

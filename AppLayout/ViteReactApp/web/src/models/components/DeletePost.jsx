@@ -1,6 +1,6 @@
 import React from "react";
-import deletePost from "../utils/deletePost";
-import getPosts from "../utils/getPost";
+import deletePost from "../services/deletePost";
+import getPosts from "../services/getPost";
 import { useEffect, useState } from 'react';
 import './axiosExample.css'
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import getPosts from '../utils/getPost';
-import updatePost from '../utils/updatePost';
+import getPosts from '../services/getPost';
+import updatePost from '../services/updatePost';
 import './axiosExample.css'
 
 const UpdatePost = () => {

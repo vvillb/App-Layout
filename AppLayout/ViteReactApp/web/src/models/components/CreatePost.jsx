@@ -1,5 +1,5 @@
 import React , { useState } from 'react';
-import createPost from '../utils/createPost'
+import createPost from '../services/createPost'
 import './axiosExample.css'
 
 const CreatePost = () => {
