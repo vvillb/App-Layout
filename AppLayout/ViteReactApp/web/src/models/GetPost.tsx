@@ -32,6 +32,7 @@ const GetPost = () => {
                 {
                     posts.map(post => (
                         <div key={post.id} className='axiosExample'>
+                            <p className='axiosExample'>ID: <span className='axiosExample'>{post.id}</span></p>
                             <p className='axiosExample'>Título: <span>{post.title}</span></p>
                             <p className='axiosExample'> <span>{post.body}</span></p>
                             <p className='axiosExample'>Autor: <span>{post.userId}</span></p>
